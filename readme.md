@@ -29,7 +29,7 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Known Bugs
 
-_There are no known buggs at this time._
+_There are no known bugs at this time._
 
 ## Support and contact details
 

@@ -12,7 +12,51 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    
+    <div class="container">
+      <h1>Places You've Been</h1>
 
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Keep track of all the places you've been</h2>
+          <form id="new-destination">
+            <div class="form-group">
+              <label for="new-destination">Destination:</label>
+              <input type="text" class="form-control" id="new-destination">
+            </div>
+            <div class="form-group">
+              <label for="new-location">Location:</label>
+              <input type="text" class="form-control" id="new-location">
+            </div>
+            <div class="form-group">
+              <label for="new-landmark">Landmarks:</label>
+              <input type="text" class="form-control" id="new-landmark">
+            </div>
+            <div class="form-group">
+              <label for="new-year">Year:</label>
+              <input type="text" class="form-control" id="new-year">
+            </div>
+            <div class="form-group">
+              <label for="new-notes">Notes:</label>
+              <input type="text" class="form-control" id="new-notes">
+            </div>
+
+            <button type="submit" class="btn btn-default">Add Adventure</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>List of Places</h2>
+          <ul>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul id="places">
+            <h2>Howdy!</h2>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
