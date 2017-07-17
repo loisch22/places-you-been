@@ -1,0 +1,7 @@
+#placeName {
+  cursor: pointer;
+  text-decoration: underline;
+}
+#places {
+  display: none;
+}

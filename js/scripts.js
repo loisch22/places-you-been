@@ -6,9 +6,9 @@ function Place(destination, locale, landmark, year, notes) {
   this.notes = notes;
 };
 
-// Contact.prototype.displayInfo = function() {
-//   return
-// };
+Place.prototype.displayDestination = function() {
+  return this.destination;
+};
 
 $(document).ready(function() {
   $("#new-destination").submit(function(event) {
@@ -22,7 +22,13 @@ $(document).ready(function() {
 
     var newPlace = new Place(inputtedDestination, inputtedLocation, inputtedLandmark, inputtedYear, inputtedNotes);
 
-    $("ul#places").append("<li><span class='places'>" + inputtedDestination + "</span></li>" + "<li><span class='places'>" + inputtedLocation + "</span></li>" + "<li><span class='places'>" + inputtedLandmark + "</span></li>" + "<li><span class='places'>" + inputtedYear + "</span></li>" + "<li><span class='places'>" + inputtedNotes + "</span></li>")
+    $("ul#placeName").append("<li>" + newPlace.displayDestination() + "</li>");
+
+    $("ul#places").append("<li><span class='places'>" + inputtedDestination + "</span></li>" + "<li><span class='places'>" + inputtedLocation + "</span></li>" + "<li><span class='places'>" + inputtedLandmark + "</span></li>" + "<li><span class='places'>" + inputtedYear + "</span></li>" + "<li><span class='places'>" + inputtedNotes + "</span></li>");
+
+    $("#placeName").click(function() {
+      $("#places").toggle();
+    });
 
     $("input#new-destination").val("");
     $("input#new-location").val("");
