@@ -28,9 +28,9 @@ $(document).ready(function() {
 
     $("ul#places").append("<li><span class='places'>" + inputtedDestination + "</span></li>" + "<li><span class='places'>" + inputtedLocation + "</span></li>" + "<li><span class='places'>" + inputtedLandmark + "</span></li>" + "<li><span class='places'>" + inputtedYear + "</span></li>" + "<li><span class='places'>" + inputtedNotes + "</span></li>");
 
-    $("#placeName li").click(function(event) {
-      $("#places").toggle(newPlace.displayDestination() + newPlace.placesInfo());
-      
+    $("#placeName li").click(function() {
+      $("#places").toggle("<li>" + newPlace.placesInfo() + "</li>");
+    //Look at previous lesson that had this issue - i believe cat dog?
     });
 
     $("input#new-destination").val("");
