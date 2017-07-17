@@ -16,8 +16,6 @@ Place.prototype.placesInfo = function() {
 
 $(document).ready(function() {
   $("#new-destination").submit(function(event) {
-    event.preventDefault();
-debugger;
     var inputtedDestination = $("input#new-destination").val();
     var inputtedLocation = $("input#new-location").val();
     var inputtedLandmark = $("input#new-landmark").val();
@@ -26,13 +24,13 @@ debugger;
 
     var newPlace = new Place(inputtedDestination, inputtedLocation, inputtedLandmark, inputtedYear, inputtedNotes);
 
+    $("ul#placeName").append("<li>" + newPlace.displayDestination() + "</li>");
 
     $("ul#places").append("<li><span class='places'>" + inputtedDestination + "</span></li>" + "<li><span class='places'>" + inputtedLocation + "</span></li>" + "<li><span class='places'>" + inputtedLandmark + "</span></li>" + "<li><span class='places'>" + inputtedYear + "</span></li>" + "<li><span class='places'>" + inputtedNotes + "</span></li>");
 
     $("#placeName").click(function(event) {
-      $("#places").show();
-
-      event.preventDefault();
+      $("#places").toggle(newPlace.displayDestination() + newPlace.placesInfo());
+      
     });
 
     $("input#new-destination").val("");
@@ -41,5 +39,6 @@ debugger;
     $("input#new-year").val("");
     $("input#new-notes").val("");
 
+    event.preventDefault();
   });
 });
